@@ -1,11 +1,12 @@
 from flask import Flask, request
-from main import insertUsuario, geraResponse
+from main import insertUsuario, geraResponse, buscaUsuario
 
 app = Flask("Chaves")
 
-@app.route("/olamundo", methods=["GET"])
-def olaMundo():
-    return{"ola": "mundo"}
+@app.route("/consulta/usuario", methods=["GET"])
+def consultaUsuario():
+   usuario = buscaUsuario()
+   return usuario
 
 @app.route("/cadastra/usuario", methods=["POST"])
 def cadastraUsuario():

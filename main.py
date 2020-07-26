@@ -13,3 +13,7 @@ def geraResponse(status, mensagem, nome_do_conteudo=False, conteudo=False):
         response[nome_do_conteudo] = conteudo
 
     return response
+
+def buscaUsuario():
+    
+    return {"id":1, "nome":"Usuario teste", "email":"usuario@email.com"}
